@@ -1,10 +1,12 @@
 -- Create database
+-- Code Author: Ayan
 CREATE DATABASE IF NOT EXISTS medical_records;
 
 -- Use database
 USE medical_records;
 
 -- Create tables
+-- Code Author: Ayan
 CREATE TABLE IF NOT EXISTS patients (
     patient_id INT AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(255),
@@ -39,6 +41,7 @@ CREATE TABLE IF NOT EXISTS medications (
     FOREIGN KEY (patient_id) REFERENCES patients(patient_id)
 );
 
+-- Code Author: Chirag
 CREATE TABLE IF NOT EXISTS test_results (
     result_id INT AUTO_INCREMENT PRIMARY KEY,
     patient_id INT,
@@ -49,6 +52,7 @@ CREATE TABLE IF NOT EXISTS test_results (
 );
 
 -- Insert sample data
+-- Code Author: Chirag Dodia
 INSERT INTO patients (first_name, last_name, age, gender, blood_type, medical_condition)
 VALUES ('Mark', 'Anderson', 20, 'Male', 'O+', 'Diabetes'),
        ('Sara', 'Nguyen', 42, 'Female', 'A-', 'Asthma');
@@ -78,6 +82,7 @@ LEFT JOIN medications m ON p.patient_id = m.patient_id
 LEFT JOIN test_results tr ON p.patient_id = tr.patient_id;
 
 -- Add constraints
+-- Code Author: Ayan
 ALTER TABLE patients
 ADD CONSTRAINT fk_admissions_patient
 FOREIGN KEY (patient_id) REFERENCES admissions(patient_id);
@@ -97,40 +102,49 @@ DELETE FROM patients WHERE first_name OR last_name IS NULL
 OR age IS NULL OR gender IS NULL OR blood_type OR medical_condition IS NULL;
 
 -- Remove rows with NULL values from the medications table
+-- Code Author: Chirag
 DELETE FROM medications WHERE admission_date IS NULL OR
 discharge_date IS NULL OR room_number IS NULL OR admission_type
 IS NULL OR doctor IS NULL OR hospital IS NULL OR insurance_provider
 IS NULL OR billing_amount;
 
 -- Remove rows with NULL values from the Doctors table
+-- Code Author: Chirag
 DELETE FROM test_results WHERE result_id IS NULL OR patient_id IS NULL OR
 test_date IS NULL OR test_name IS NULL OR result;
 
--- Adding uniqueness and adding constraints with respect to formatting to the database
-
 -- Added unique constraint to patients' first_name and last_name
+-- Code Author: Ayan
 ALTER TABLE patients ADD CONSTRAINT uc_patient_names UNIQUE (first_name, last_name);
 
 -- Added constraint to ensure age is positive
+-- Code Author: Ayan
 ALTER TABLE patients ADD CONSTRAINT chk_positive_age CHECK (age > 0);
 
 -- Added unique constraint to admissions' room_number within each hospital
+-- Code Author: Ayan
 ALTER TABLE admissions ADD CONSTRAINT uc_room_number_per_hospital UNIQUE (hospital, room_number);
 
 -- Added constraint to ensure admission_type is one of the specified values
+-- Code Author: Ayan
 ALTER TABLE admissions ADD CONSTRAINT chk_admission_type CHECK (admission_type IN ('Emergency', 'Elective', 'Urgent'));
 
 -- Added constraint to ensure billing_amount is positive
+-- Code Author: Chirag
 ALTER TABLE admissions ADD CONSTRAINT chk_positive_billing_amount CHECK (billing_amount > 0);
 
 -- Added unique constraint to medications' medication_name within each patient
+-- Code Author: Chirag
 ALTER TABLE medications ADD CONSTRAINT uc_medication_name_per_patient UNIQUE (patient_id, medication_name);
 
 -- Added constraint to ensure dosage is in a specific format
+-- Code Author: Chirag
 ALTER TABLE medications ADD CONSTRAINT chk_dosage_format CHECK (dosage LIKE '[0-9]+ [a-zA-Z]+');
 
 -- Added unique constraint to test_results' test_name within each patient
+-- Code Author: Chirag
 ALTER TABLE test_results ADD CONSTRAINT uc_test_name_per_patient UNIQUE (patient_id, test_name);
 
 -- Added constraint to ensure result is one of the specified values
+-- Code Author: Chirag
 ALTER TABLE test_results ADD CONSTRAINT chk_result CHECK (result IN ('Normal', 'Abnormal', 'Inconclusive'));
