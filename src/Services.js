@@ -6,29 +6,37 @@ function Services() {
     return (
         <div className="services-container">
             
-            <Link to="/appointment" className="schedule-appointment-link">Click here to schedule an appointment</Link>
+            <div className="service-buttons">
+                <Link to="/appointment" className="service-button">
+                    Schedule Appointment
+                </Link>
+            </div>
             
-            <h2 className="services-heading">Our Services</h2>
+            <h2 className="services-heading">Explore Our Services</h2>
             <div className="service-cards">
                 <div className="service-card">
-                    <h3>Primary Care Consultation</h3>
-                    <p>Comprehensive consultation with experienced physicians for general health concerns.</p>
+                    <h3>Patient Record Management</h3>
+                    <p>Efficiently organize and oversee patient records to ensure seamless care.</p>
                 </div>
                 <div className="service-card">
-                    <h3>Specialized Treatments</h3>
-                    <p>Advanced treatments tailored to specific medical conditions, including chronic diseases and acute illnesses.</p>
+                    <h3>Secure EHR Access</h3>
+                    <p>Access and manage health records securely anytime, anywhere.</p>
                 </div>
                 <div className="service-card">
-                    <h3>Diagnostic Services</h3>
-                    <p>State-of-the-art diagnostic tests and procedures for accurate health assessments and early detection of diseases.</p>
+                    <h3>Real-Time Appointment Scheduling</h3>
+                    <p>Book and manage appointments with ease for both patients and staff.</p>
                 </div>
                 <div className="service-card">
-                    <h3>Preventive Care Programs</h3>
-                    <p>Personalized preventive care plans to promote overall wellness and reduce the risk of future health problems.</p>
+                    <h3>Insurance Claim Processing</h3>
+                    <p>Submit and track insurance claims directly from the platform for faster reimbursements.</p>
                 </div>
                 <div className="service-card">
-                    <h3>Emergency Medical Care</h3>
-                    <p>Immediate medical attention and emergency services for urgent healthcare needs and critical situations.</p>
+                    <h3>Medication Reminders &amp; Alerts</h3>
+                    <p>Receive automated reminders for prescriptions and appointments to improve adherence.</p>
+                </div>
+                <div className="service-card">
+                    <h3>Health Consultations</h3>
+                    <p>Connect with healthcare providers via secure video calls from any location.</p>
                 </div>
             </div>
             <div className="service-buttons">

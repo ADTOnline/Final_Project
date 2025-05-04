@@ -30,11 +30,12 @@ function AboutUs() {
                 <h2>Explore Our Features</h2>
                 <div className="features-cards">
                     {[
-                        { title: 'Patient Management', desc: 'Efficiently organize and oversee patient records to ensure seamless care.' },
-                        { title: 'Electronic Health Records', desc: 'Access and manage health records securely anytime, anywhere.' },
-                        { title: 'Appointment Scheduling', desc: 'Book and manage appointments with ease for both patients and staff.' },
-                        { title: 'Billing and Payment Processing', desc: 'Simplify your billing workflows with fast, hassle-free payments.' },
-                        { title: 'Analytics and Reporting', desc: 'Gain actionable insights with advanced reporting and analytics tools.' }
+                        { title: 'Patient Record Management', desc: 'Efficiently organize and oversee patient records to ensure seamless care.' },
+                        { title: 'Secure EHR Access', desc: 'Access and manage health records securely anytime, anywhere.' },
+                        { title: 'Real-Time Appointment Scheduling', desc: 'Book and manage appointments with ease for both patients and staff.' },
+                        { title: 'Insurance Claim Processing', desc: 'Submit and track insurance claims directly from the platform for faster reimbursements.' },
+                        { title: 'Medication Reminders & Alerts', desc: 'Receive automated reminders for prescriptions and appointments to improve adherence.' },
+                        { title: 'Health Consultations', desc: 'Connect with healthcare providers via secure video calls from any location.' }
                     ].map((feature, index) => (
                         <div
                             key={index}
@@ -49,7 +50,7 @@ function AboutUs() {
             </div>
 
             <div className="team-section" id="team">
-                <h2>Our Amazing Team</h2>
+                <h2>Team Members</h2>
                 <div className="team-cards">
                     <div className="team-card">
                         <img src={require('./Images/chirag2.jpeg')} alt="Chirag Dodia photo" className="team-photo" />
