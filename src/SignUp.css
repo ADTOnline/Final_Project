@@ -1,0 +1,107 @@
+html, body {
+    background-color: #ffffff !important;
+}
+body {
+    background-color: #ffffff;
+}
+.sign-up-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: 50px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sign-up-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+ 
+.form-group label .icon {
+    margin-right: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.error {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.submit-button {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    padding: 14px;
+    background-color: #000 !important;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    width: 360px;
+    margin: 20px auto 0 auto;
+}
+
+.submit-button:hover {
+    background-color: #333 !important;
+    transform: translateY(-1px);
+}
+
+.back-to-front {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-link {
+    display: block;
+    text-align: center;
+    padding: 0 !important;
+    background-color: #000 !important;
+    color: #fff !important;
+    border-radius: 8px !important;
+    margin: 20px auto 0 auto;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 48px !important;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 360px !important;
+    height: 48px !important;
+    border: none;
+}
+
+.back-link .icon {
+    margin-right: 8px;
+}
+
+.back-link:hover {
+    background-color: #333 !important;
+    transform: translateY(-1px);
+    text-decoration: none;
+}

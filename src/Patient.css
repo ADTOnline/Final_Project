@@ -1,0 +1,27 @@
+
+#patientProfile {
+    margin: 20px 0;
+  }
+  
+  #patientProfile .profile-detail {
+    margin-bottom: 10px;
+  }
+  
+  #patientProfile h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  
+  #medicalHistory {
+    margin-top: 20px;
+  }
+  
+  .medical-history-item {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+  
