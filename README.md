@@ -19,7 +19,8 @@
 
 ## 📊 Dataset
 
-- **Source:** Kaggle  
+- **Source:** Kaggle
+- ** Link:** https://www.kaggle.com/datasets/prasad22/healthcare-dataset?resource=download
 - **Records:** 10,000+  
 - **Includes:** Patient demographics, clinical status, admission details  
 - **Preprocessing:** Duplicate removal, data type conversion, segmentation
